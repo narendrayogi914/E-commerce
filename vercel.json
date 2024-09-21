@@ -1,0 +1,22 @@
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "client/main.jsx",
+            "use": "@vercel/static-build",
+            "config": {}
+        }
+    ],
+    "routes": [
+        {
+            "src": "/api/*",
+            "dest": "server/server.js"
+        }
+    ],
+    "rewrites": [
+        {
+            "source": "/(.*)",
+            "destination": "/"
+        }
+    ]
+}
